@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --preto: #0a0911;
+    --azul: #080050;
+    --azul-claro: #036ce4;
+    --text-shadow: .1rem .1rem .3rem #333;
+    --box-shadow: .1rem .1rem .3rem #333;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container .conteudo {
+    text-align: center;
+    text-shadow: var(--text-shadow);
+}
+
+.container .conteudo h1 {
+    font-size: 9rem;
+    color: var(--azul-claro);
+}
+
+.container .conteudo h2 {
+    font-size: 7rem;
+    color: #fff;
+}
+
+.container .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.container .video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    animation: vid .5s alternate;
+    display: none;
+}
+
+.container .video-container .vid1 {
+    display: block;
+}
+
+@keyframes vid {
+    0% {
+        transform: scale(3.5rem) skew(-45deg) rotate(45deg);
+    }
+}

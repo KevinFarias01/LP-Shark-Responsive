@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --preto: #0a0911;
+    --azul: #080050;
+    --azul-claro: #036ce4;
+    --text-shadow: .1rem .1rem .3rem #333;
+    --box-shadow: .1rem .1rem .3rem #333;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header .logo {
+    font-size: 1.6rem;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: var(--text-shadow);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu ul li {
+    margin: 0 2rem;
+}
+
+.menu ul li a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: var(--text-shadow);
+}
+
+.menu ul li a:hover {
+    color: var(--azul-claro);
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    header .fa-bars {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -120%;
+        height: 100vh;
+        width: 100vw;
+        background: rgba(0, 0, 0, .8);
+        z-index: 100;
+    }
+
+    .menu ul {
+        height: 100%;
+        width: 35rem;
+        background: var(--preto);
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .menu ul li {
+        margin: 2rem 0;
+    }
+
+    .menu ul li a {
+        font-size: 3rem;
+    }
+
+    header .menu-toggle {
+        left: 0;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .container .conteudo h1 {
+        font-size: 5rem;
+    }
+
+    .container .conteudo h2 {
+        font-size: 4rem;
+    }
+}
