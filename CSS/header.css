@@ -39,14 +39,19 @@ header .logo {
 }
 
 .menu ul li a {
-    font-size: 2rem;
-    text-decoration: none;
     color: #fff;
-    text-shadow: var(--text-shadow);
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 .menu ul li a:hover {
-    color: var(--azul-claro);
+    font-size: 1.7rem;
 }
 
 header .fa-bars {
